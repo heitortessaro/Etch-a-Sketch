@@ -1,0 +1,19 @@
+html {
+    /* footer support */
+    position: relative;
+    min-height: 100%;
+  }
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.gridContainer {
+    display: grid;
+    width: 600px;
+    height: 600px;
+    /* background-color: var(--secondary-light); */
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; 
+  }
