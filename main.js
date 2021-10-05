@@ -1,7 +1,7 @@
 // Constants
 const DEFAULT_SIZE = 16;
-let paintColor = 'black';
-let userColor = '#000000';
+let paintColor = 'userSelection';
+let userColor = '#EF2929';
 
 //Get elements
 const gridContainer = document.getElementById('gridContainer')
