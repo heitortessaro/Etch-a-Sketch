@@ -11,15 +11,28 @@
 </head>
 
 <body>
-    <h1>Etch-a-Sketch</h1>
-    <input type="range" id="gridSize" name="gridSize" min="5" max="100">
+    <div class="header">
+        <h1>Etch-a-Sketch</h1>
+    </div>
+    <div class="selector">
+        <h3>Select the number of cells inside the drawing board</h3>
+        <h4>increase from left to the right</h4>
+        <input type="range" id="gridSize" name="gridSize" min="5" max="100">
+    </div>
     <div class="btns">
-        <button id='colorSelect'> Select Color </button>
+        <button id='colorSelect'> Select color
+            <input type="color" value="#ff0000" id="inputColor">
+        </button>
         <button id='raimbow'> Raimbow </button>
         <button id='eraser'> Eraser </button>
         <button id='resetBoard'> Reset Board </button>
     </div>
     <div id="gridContainer" class="gridContainer"></div>
+    <div class="footer">
+        <p>Copyright © 2021 heitortessaro</p>
+        <a href="https://github.com/heitortessaro"><button class='gitBtn'></button></a>
+        <!-- <img class="gitBtnImg" src="./imgs/github-logo.svg"> -->
+    </div>
 </body>
 
 </html>

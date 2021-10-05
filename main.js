@@ -1,6 +1,7 @@
 // Constants
 const DEFAULT_SIZE = 16;
 let paintColor = 'black';
+let userColor = '#000000';
 
 //Get elements
 const gridContainer = document.getElementById('gridContainer')
@@ -9,7 +10,7 @@ const resetBoard = document.getElementById('resetBoard');
 const eraseBtn = document.getElementById('eraser')
 const colorBtn = document.getElementById('colorSelect');
 const raimbowBtn = document.getElementById('raimbow');
-
+const colorSelector = document.getElementById('inputColor');
 
 //Evet listeners
 resetBoard.addEventListener('click', () => resetColor());
@@ -17,13 +18,19 @@ eraseBtn.addEventListener('click', function () {
     paintColor = 'erase';
 });
 colorBtn.addEventListener('click', function () {
-    paintColor = 'black';
+     paintColor = 'userSelection';
 });
 raimbowBtn.addEventListener('click', function () {
     paintColor = 'raimbow';
 });
+colorSelector.addEventListener('change', function (e) {
+    paintColor = 'userSelection';
+    userColor = e.target.value;
+});
 
 //Function
+
+// alter grid size
 girdSize.onchange = function () {
     resetColor();
     createGrid(girdSize.value);
@@ -47,8 +54,10 @@ function changeColor(e) {
         e.target.style.backgroundColor = '#FFFFFF';
     } else if (paintColor == 'raimbow') {
         const randomColor = Math.floor(Math.
-            random()*16777215).toString(16);
+            random() * 16777215).toString(16);
         e.target.style.backgroundColor = "#" + randomColor;
+    } else if (paintColor == 'userSelection'){
+        e.target.style.backgroundColor = userColor;
     }
 }
 
