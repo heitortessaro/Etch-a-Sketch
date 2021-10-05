@@ -54,6 +54,11 @@ h3,h4{
     text-align: center;
 }
 
+.selector{
+    width: 550px;
+    padding: 10px;
+}
+
 #inputColor{
     /* border: none; */
     height: 20px;
